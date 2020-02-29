@@ -1,0 +1,12 @@
+CATALIN BAJENARU 311CB
+PREZENTARE GENERICA A PROGRAMULUI (cu bonus)
+Functiile intpoi si poiint substituie actiunea cast.
+Functia realease(FREE) elibereaza un bloc din memorie, pune 0 unde era alocat blocul si unde erau cei 12 octeti pt informatiile ce privesc blocul viitor pe cel anterior si marimea celui actual. Modifica primii 4 octeti ai blocului anterior si pe urmatorii 4 de la blocul viitor.
+Functia setval(FILL) seteaza valoarea a size octeti de la indicele indx cu val.
+Functia initialie aloca memorie pt intreaga arena chemand functia calloc.
+Functia dump afiseaza arena in modul specificat in enuntul problemei.
+Functia alloc returneaza indice catre locul in care se poate aloca un bloc de marime size.
+Functia finalize elibereaza arena si face indicele curent 0.
+Functia allocal(ALLOCALIGN) se comporta asemanator cu functia alloc dar se asigura ca indicele este divizibil cu ALIGN. Cand este gasit un indice de unde s-ar putea aloca noul bloc de memorie este verificat daca acest indice este divizibil cu ALIGN. Daca nu este atunci foloseste urmatoarea formula pentru a gasi urmatorul indice cel mai apropiat de cel curent care sa fie cu siguranta divizibil cu ALIGN prin formula ((index / ALIGN) + 1) * ALIGN.
+Functia realoc(REALLOC) sterge un bloc si il redimensioneaza la marimea size, utilizeaza FREE si ALLOC. Foloseste un vector auxiliar in care pastreaza datele blocului sters pentru a le repune in indexul return de ALLOC.
+
